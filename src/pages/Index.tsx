@@ -76,11 +76,8 @@ export default function Index() {
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-white/5 px-6 py-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollTo("hero")}>
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-neon to-neon-blue flex items-center justify-center">
-              <Icon name="Sparkles" size={18} className="text-[#060d14]" />
-            </div>
-            <span className="font-heading font-bold text-xl tracking-wide">АРЕНДА<span className="neon-text"> ЧИСТОТЫ</span></span>
+          <div className="flex items-center cursor-pointer" onClick={() => scrollTo("hero")}>
+            <img src="https://cdn.poehali.dev/projects/9b8e5809-3eed-40de-a586-aa4d126be120/bucket/fcd2a8fa-46fd-4e20-9d89-6c2a6b8c588d.png" alt="Аренда Чистоты" className="h-10 w-auto" />
           </div>
 
           <div className="hidden md:flex items-center gap-8">
@@ -477,11 +474,8 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="border-t border-white/8 py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-neon to-neon-blue flex items-center justify-center">
-              <Icon name="Sparkles" size={14} className="text-[#060d14]" />
-            </div>
-            <span className="font-heading font-bold">АРЕНДА<span className="neon-text"> ЧИСТОТЫ</span></span>
+          <div className="flex items-center">
+            <img src="https://cdn.poehali.dev/projects/9b8e5809-3eed-40de-a586-aa4d126be120/bucket/fcd2a8fa-46fd-4e20-9d89-6c2a6b8c588d.png" alt="Аренда Чистоты" className="h-8 w-auto" />
           </div>
           <div className="text-sm text-white/30">© 2025 Аренда Чистоты — Химчистка мебели в Краснодаре</div>
           <div className="flex items-center gap-4">
