@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Icon from "@/components/ui/icon";
+import CookieBanner from "@/components/CookieBanner";
+import PrivacyModal from "@/components/PrivacyModal";
 
 const HERO_IMG = "https://cdn.poehali.dev/projects/9b8e5809-3eed-40de-a586-aa4d126be120/files/7893760d-fce7-411d-ad83-bd7eb1611ff0.jpg";
 const TEAM_IMG = "https://cdn.poehali.dev/projects/9b8e5809-3eed-40de-a586-aa4d126be120/files/c20d9430-4399-4e0f-8bc5-b652facff4c0.jpg";
@@ -56,6 +58,7 @@ export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [formData, setFormData] = useState({ name: "", phone: "", service: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [privacyOpen, setPrivacyOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -458,9 +461,15 @@ export default function Index() {
             <span className="font-heading font-bold">АРЕНДА<span className="neon-text"> ЧИСТОТЫ</span></span>
           </div>
           <div className="text-sm text-white/30">© 2025 Аренда Чистоты — Химчистка мебели в Краснодаре</div>
-          <a href="tel:89189682882" className="text-sm text-white/50 hover:text-neon transition-colors">8 918 968-28-82</a>
+          <div className="flex items-center gap-4">
+            <button onClick={() => setPrivacyOpen(true)} className="text-sm text-white/40 hover:text-neon transition-colors">Политика конфиденциальности</button>
+            <a href="tel:89189682882" className="text-sm text-white/50 hover:text-neon transition-colors">8 918 968-28-82</a>
+          </div>
         </div>
       </footer>
+
+      <CookieBanner onPrivacyClick={() => setPrivacyOpen(true)} />
+      <PrivacyModal open={privacyOpen} onClose={() => setPrivacyOpen(false)} />
     </div>
   );
 }
