@@ -123,6 +123,11 @@ export default function Index() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
           <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full mb-6 animate-fade-in opacity-0 border border-neon/30">
+              <span className="w-2 h-2 rounded-full bg-neon pulse-ring inline-block" />
+              <span className="text-sm text-neon font-medium">Выезд на дом по всему Краснодару</span>
+            </div>
+
             <h1 className="font-heading text-5xl md:text-7xl font-bold leading-none mb-6 animate-fade-in-d1 opacity-0">
               АРЕНДА ЧИСТОТЫ —<br />
               <span className="gradient-text">ХИМЧИСТКА</span><br />
