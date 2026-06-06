@@ -437,7 +437,7 @@ export default function Index() {
               <div className="glass-card rounded-2xl p-5 border border-white/8">
                 <div className="text-xs text-white/40 uppercase tracking-wider mb-3">Написать мастеру</div>
                 <div className="flex gap-3">
-                  <a href="https://max.ru/89189682882" target="_blank" rel="noopener noreferrer"
+                  <a href="https://max.ru/u/f9LHodD0cOIhDoRH_6LXfcSUOHBuL1Ox9Kjst5F3mN4736vAC4pXtz-GKzc" target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-2 glass-card px-4 py-2 rounded-xl border border-white/10 hover:border-neon/30 hover:text-neon transition-all text-sm">
                     <Icon name="MessageSquare" size={16} className="text-neon" />Макс
                   </a>
