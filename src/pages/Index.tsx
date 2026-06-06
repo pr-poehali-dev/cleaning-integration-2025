@@ -48,7 +48,7 @@ const reviews = [
 
 const stats = [
   { value: "2500+", label: "довольных клиентов" },
-  { value: "8", label: "лет на рынке" },
+  { value: "10", label: "лет на рынке" },
   { value: "98%", label: "положительных отзывов" },
   { value: "30 мин", label: "время выезда" },
 ];
