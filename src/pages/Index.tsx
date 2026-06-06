@@ -129,9 +129,9 @@ export default function Index() {
             </div>
 
             <h1 className="font-heading text-5xl md:text-7xl font-bold leading-none mb-6 animate-fade-in-d1 opacity-0">
-              МЕБЕЛЬ<br />
-              <span className="gradient-text">ЧИСТАЯ,</span><br />
-              КАК НОВАЯ
+              АРЕНДА ЧИСТОТЫ —<br />
+              <span className="gradient-text">ХИМЧИСТКА</span><br />
+              МЕБЕЛИ
             </h1>
 
             <p className="text-lg text-white/60 mb-8 max-w-md leading-relaxed animate-fade-in-d2 opacity-0">
