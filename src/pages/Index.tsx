@@ -61,9 +61,29 @@ export default function Index() {
   const [privacyOpen, setPrivacyOpen] = useState(false);
   const [privacyChecked, setPrivacyChecked] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setSendError("");
+    try {
+      const res = await fetch("https://functions.poehali.dev/8c8a82ba-d48f-45e5-8a0f-73cc7595b73a", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setSendError("Ошибка отправки. Попробуйте ещё раз или позвоните нам.");
+      }
+    } catch {
+      setSendError("Нет соединения. Позвоните нам: 8 918 968-28-82");
+    } finally {
+      setSending(false);
+    }
   };
 
   const scrollTo = (id: string) => {
@@ -426,12 +446,15 @@ export default function Index() {
                   </label>
                   <button
                     type="submit"
-                    disabled={!privacyChecked}
+                    disabled={!privacyChecked || sending}
                     className="neon-btn w-full py-4 rounded-xl text-base font-bold mt-1 flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed disabled:shadow-none disabled:transform-none"
                   >
-                    <Icon name="Send" size={18} />
-                    Отправить заявку
+                    <Icon name={sending ? "Loader" : "Send"} size={18} className={sending ? "animate-spin" : ""} />
+                    {sending ? "Отправляем..." : "Отправить заявку"}
                   </button>
+                  {sendError && (
+                    <p className="text-sm text-red-400 text-center">{sendError}</p>
+                  )}
                 </form>
               )}
             </div>
