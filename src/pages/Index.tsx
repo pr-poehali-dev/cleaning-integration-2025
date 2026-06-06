@@ -35,9 +35,9 @@ const advantages = [
 ];
 
 const portfolio = [
-  { img: PORTFOLIO_IMG, label: "Квартира 85 м²", time: "3 часа", result: "Идеальная чистота" },
-  { img: HERO_IMG, label: "Офис 200 м²", time: "4 часа", result: "Корпоративный стандарт" },
-  { img: TEAM_IMG, label: "Ресторан", time: "5 часов", result: "Санитарные нормы" },
+  { img: "https://cdn.poehali.dev/projects/9b8e5809-3eed-40de-a586-aa4d126be120/files/16a265b8-84a9-4055-8fc5-05007a6aba0c.jpg", label: "Диван угловой", time: "2 часа", result: "Пятна и запах удалены" },
+  { img: "https://cdn.poehali.dev/projects/9b8e5809-3eed-40de-a586-aa4d126be120/files/f155984f-f5da-488f-8d2a-b5ac17b71963.jpg", label: "Матрас двуспальный", time: "1.5 часа", result: "Аллергены устранены" },
+  { img: "https://cdn.poehali.dev/projects/9b8e5809-3eed-40de-a586-aa4d126be120/files/f3654d01-2f26-4faa-ba32-1a75141bce35.jpg", label: "Ковёр 3×4 м", time: "2.5 часа", result: "Как после покупки" },
 ];
 
 const reviews = [
