@@ -17,19 +17,19 @@ function useReveal() {
 }
 
 const services = [
-  { icon: "Home", title: "Квартиры и дома", desc: "Генеральная и поддерживающая уборка любой площади" },
-  { icon: "Building2", title: "Офисы", desc: "Ежедневное и разовое обслуживание бизнес-помещений" },
-  { icon: "Sofa", title: "Мебель", desc: "Химчистка диванов, кресел, матрасов и ковров" },
-  { icon: "Sparkles", title: "После ремонта", desc: "Полное устранение строительной пыли и загрязнений" },
-  { icon: "CarFront", title: "Автомобили", desc: "Химчистка салона, обивки и багажника" },
-  { icon: "Building", title: "Коммерческие объекты", desc: "Торговые центры, рестораны, склады" },
+  { icon: "Sofa", title: "Диваны и кресла", desc: "Глубокая химчистка мягкой мебели любой сложности" },
+  { icon: "BedDouble", title: "Матрасы", desc: "Удаление пятен, запахов и аллергенов из матрасов" },
+  { icon: "LayoutGrid", title: "Ковры и ковровые покрытия", desc: "Чистка ковров и паласов с выездом на дом" },
+  { icon: "CarFront", title: "Автомобильный салон", desc: "Химчистка сидений, обивки и потолка авто" },
+  { icon: "Armchair", title: "Стулья и пуфы", desc: "Восстановление внешнего вида тканевой мебели" },
+  { icon: "Sparkles", title: "Устранение пятен и запахов", desc: "Выведение сложных пятен и неприятных запахов" },
 ];
 
 const advantages = [
   { icon: "ShieldCheck", title: "Гарантия результата", desc: "Если останетесь недовольны — перечистим бесплатно" },
-  { icon: "Clock", title: "Точно в срок", desc: "Прибываем в назначенное время, не опаздываем" },
-  { icon: "Leaf", title: "Эко-химия", desc: "Только безопасные средства, сертифицированные в России" },
-  { icon: "Star", title: "Лауреат 2025", desc: "Премия «Лучший клининг» по версии экспертов рынка" },
+  { icon: "Clock", title: "Сушка за 2–4 часа", desc: "Быстрое высыхание — мебель готова к использованию в тот же день" },
+  { icon: "Leaf", title: "Безопасная химия", desc: "Только сертифицированные средства, безопасные для детей и животных" },
+  { icon: "Star", title: "Лауреат 2025", desc: "Премия «Лучшая химчистка мебели» по версии экспертов рынка" },
 ];
 
 const portfolio = [
@@ -39,8 +39,8 @@ const portfolio = [
 ];
 
 const reviews = [
-  { name: "Анастасия М.", rating: 5, text: "Заказала генеральную уборку после ремонта. Результат превзошёл ожидания! Ни пылинки, ни разводов. Команда профессионалов.", city: "Краснодар" },
-  { name: "Дмитрий К.", rating: 5, text: "Регулярно пользуемся для офиса уже год. Всегда вовремя, всегда качественно. Рекомендую без оговорок!", city: "Краснодар" },
+  { name: "Анастасия М.", rating: 5, text: "Заказала химчистку дивана после кота. Результат превзошёл ожидания! Ни пятнышка, ни запаха. Мастер аккуратный и профессиональный.", city: "Краснодар" },
+  { name: "Дмитрий К.", rating: 5, text: "Чистили матрас и два кресла. Всегда вовремя, всегда качественно. Рекомендую без оговорок!", city: "Краснодар" },
   { name: "Елена Р.", rating: 5, text: "Химчистка дивана — огонь! Думала, уже не отмоется, а они его как новый сделали. Цена адекватная, мастера аккуратные.", city: "Краснодар" },
 ];
 
@@ -76,7 +76,7 @@ export default function Index() {
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-neon to-neon-blue flex items-center justify-center">
               <Icon name="Sparkles" size={18} className="text-[#060d14]" />
             </div>
-            <span className="font-heading font-bold text-xl tracking-wide">CLEAN<span className="neon-text">PRO</span></span>
+            <span className="font-heading font-bold text-xl tracking-wide">АРЕНДА<span className="neon-text"> ЧИСТОТЫ</span></span>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
@@ -115,7 +115,7 @@ export default function Index() {
       {/* HERO */}
       <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0">
-          <img src={HERO_IMG} alt="CleanPro" className="w-full h-full object-cover opacity-20" />
+          <img src={HERO_IMG} alt="Аренда Чистоты" className="w-full h-full object-cover opacity-20" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#060d14] via-[#060d14]/80 to-transparent" />
         </div>
         <div className="orb w-96 h-96 bg-neon/20 top-20 left-10 opacity-30" style={{ filter: "blur(100px)" }} />
@@ -125,23 +125,23 @@ export default function Index() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full mb-6 animate-fade-in opacity-0 border border-neon/30">
               <span className="w-2 h-2 rounded-full bg-neon pulse-ring inline-block" />
-              <span className="text-sm text-neon font-medium">Лауреат «Лучший клининг Краснодара 2025»</span>
+              <span className="text-sm text-neon font-medium">Лауреат «Лучшая химчистка мебели Краснодара 2025»</span>
             </div>
 
             <h1 className="font-heading text-5xl md:text-7xl font-bold leading-none mb-6 animate-fade-in-d1 opacity-0">
-              ЧИСТОТА,<br />
-              <span className="gradient-text">КОТОРУЮ</span><br />
-              ВИДНО
+              МЕБЕЛЬ<br />
+              <span className="gradient-text">ЧИСТАЯ,</span><br />
+              КАК НОВАЯ
             </h1>
 
             <p className="text-lg text-white/60 mb-8 max-w-md leading-relaxed animate-fade-in-d2 opacity-0">
-              Профессиональный клининг в Краснодаре. Квартиры, офисы, после ремонта. Гарантия результата или чистим повторно бесплатно.
+              Профессиональная химчистка диванов, кресел, матрасов и ковров в Краснодаре. Выезд на дом, сушка за 2–4 часа. Гарантия результата.
             </p>
 
             <div className="flex flex-wrap gap-4 animate-fade-in-d3 opacity-0">
               <button onClick={() => scrollTo("contacts")} className="neon-btn px-8 py-4 rounded-2xl text-base font-bold flex items-center gap-2">
                 <Icon name="Sparkles" size={18} />
-                Заказать уборку
+                Заказать химчистку
               </button>
               <a href="tel:89189682882" className="glass-card px-8 py-4 rounded-2xl text-base font-medium flex items-center gap-2 hover:border-neon/40 transition-all border border-white/10">
                 <Icon name="Phone" size={18} className="text-neon" />
@@ -186,10 +186,10 @@ export default function Index() {
                 <span className="gradient-text">БЕЗУПРЕЧНО</span>
               </h2>
               <p className="text-white/60 leading-relaxed mb-6">
-                CleanPro — команда профессионалов с опытом работы в премиальном клининге. Мы обслуживаем жилые и коммерческие объекты Краснодара, используя только профессиональное оборудование и сертифицированную экохимию.
+                Аренда Чистоты — команда профессионалов по химчистке мягкой мебели с выездом на дом. Обслуживаем Краснодар и пригород, используя только профессиональное оборудование и безопасную сертифицированную химию.
               </p>
               <p className="text-white/60 leading-relaxed mb-8">
-                Каждый наш специалист проходит трёхмесячное обучение. Мы несём ответственность за результат и гарантируем, что вы останетесь довольны.
+                Каждый наш мастер проходит специализированное обучение. Мы несём ответственность за результат и гарантируем, что вы останетесь довольны.
               </p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-neon/10 border border-neon/30 flex items-center justify-center">
@@ -197,7 +197,7 @@ export default function Index() {
                 </div>
                 <div>
                   <div className="font-semibold">Лауреат премии 2025</div>
-                  <div className="text-sm text-white/50">«Лучший клининг Краснодара»</div>
+                  <div className="text-sm text-white/50">«Лучшая химчистка мебели Краснодара»</div>
                 </div>
               </div>
             </div>
@@ -225,6 +225,7 @@ export default function Index() {
               <div className="w-8 h-px bg-neon" />Услуги<div className="w-8 h-px bg-neon" />
             </div>
             <h2 className="font-heading text-4xl md:text-5xl font-bold">ЧТО МЫ <span className="gradient-text">ЧИСТИМ</span></h2>
+            <p className="text-white/50 mt-4">Химчистка мебели с выездом на дом по всему Краснодару</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-5">
@@ -348,7 +349,7 @@ export default function Index() {
             <div className="inline-flex items-center gap-2 text-neon text-sm font-medium tracking-widest uppercase mb-4">
               <div className="w-8 h-px bg-neon" />Контакты<div className="w-8 h-px bg-neon" />
             </div>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold">ЗАКАЖИТЕ <span className="gradient-text">УБОРКУ</span></h2>
+            <h2 className="font-heading text-4xl md:text-5xl font-bold">ЗАКАЖИТЕ <span className="gradient-text">ХИМЧИСТКУ</span></h2>
             <p className="text-white/50 mt-4">Оставьте заявку — перезвоним в течение 15 минут</p>
           </div>
 
@@ -395,12 +396,12 @@ export default function Index() {
                       className="w-full bg-[#0d1b28] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neon/50 transition-colors"
                     >
                       <option value="">Выберите услугу...</option>
-                      <option>Уборка квартиры / дома</option>
-                      <option>Уборка офиса</option>
-                      <option>Химчистка мебели</option>
-                      <option>После ремонта</option>
-                      <option>Химчистка автомобиля</option>
-                      <option>Коммерческий объект</option>
+                      <option>Химчистка дивана</option>
+                      <option>Химчистка кресел</option>
+                      <option>Химчистка матраса</option>
+                      <option>Химчистка ковра</option>
+                      <option>Химчистка автомобильного салона</option>
+                      <option>Удаление пятен и запахов</option>
                     </select>
                   </div>
                   <button type="submit" className="neon-btn w-full py-4 rounded-xl text-base font-bold mt-2 flex items-center justify-center gap-2">
@@ -434,15 +435,11 @@ export default function Index() {
               ))}
 
               <div className="glass-card rounded-2xl p-5 border border-white/8">
-                <div className="text-xs text-white/40 uppercase tracking-wider mb-3">Мы в мессенджерах</div>
+                <div className="text-xs text-white/40 uppercase tracking-wider mb-3">Написать мастеру</div>
                 <div className="flex gap-3">
-                  <a href="https://wa.me/89189682882" target="_blank" rel="noopener noreferrer"
+                  <a href="https://max.ru/89189682882" target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-2 glass-card px-4 py-2 rounded-xl border border-white/10 hover:border-neon/30 hover:text-neon transition-all text-sm">
-                    <Icon name="MessageCircle" size={16} className="text-neon" />WhatsApp
-                  </a>
-                  <a href="https://t.me/89189682882" target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-2 glass-card px-4 py-2 rounded-xl border border-white/10 hover:border-neon/30 hover:text-neon transition-all text-sm">
-                    <Icon name="Send" size={16} className="text-neon" />Telegram
+                    <Icon name="MessageSquare" size={16} className="text-neon" />Макс
                   </a>
                 </div>
               </div>
@@ -458,9 +455,9 @@ export default function Index() {
             <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-neon to-neon-blue flex items-center justify-center">
               <Icon name="Sparkles" size={14} className="text-[#060d14]" />
             </div>
-            <span className="font-heading font-bold">CLEAN<span className="neon-text">PRO</span></span>
+            <span className="font-heading font-bold">АРЕНДА<span className="neon-text"> ЧИСТОТЫ</span></span>
           </div>
-          <div className="text-sm text-white/30">© 2025 CleanPro — Профессиональный клининг в Краснодаре</div>
+          <div className="text-sm text-white/30">© 2025 Аренда Чистоты — Химчистка мебели в Краснодаре</div>
           <a href="tel:89189682882" className="text-sm text-white/50 hover:text-neon transition-colors">8 918 968-28-82</a>
         </div>
       </footer>
