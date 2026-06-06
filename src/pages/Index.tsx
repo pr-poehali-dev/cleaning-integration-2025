@@ -186,8 +186,8 @@ export default function Index() {
                 О нас
               </div>
               <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                8 ЛЕТ ДЕЛАЕМ<br />
-                <span className="gradient-text">БЕЗУПРЕЧНО</span>
+                РАБОТАЕМ<br />
+                <span className="gradient-text">С 2015 ГОДА</span>
               </h2>
               <p className="text-white/60 leading-relaxed mb-6">
                 Аренда Чистоты — команда профессионалов по химчистке мягкой мебели с выездом на дом. Обслуживаем Краснодар и пригород, используя только профессиональное оборудование и безопасную сертифицированную химию.
@@ -200,8 +200,8 @@ export default function Index() {
                   <Icon name="Award" size={22} className="text-neon" />
                 </div>
                 <div>
-                  <div className="font-semibold">Лауреат премии 2025</div>
-                  <div className="text-sm text-white/50">«Лучшая химчистка мебели Краснодара»</div>
+                  <div className="font-semibold">Работаем с 2015 года</div>
+                  <div className="text-sm text-white/50">Более 10 лет на рынке химчистки мебели</div>
                 </div>
               </div>
             </div>
