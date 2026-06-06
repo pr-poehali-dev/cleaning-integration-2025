@@ -59,6 +59,7 @@ export default function Index() {
   const [formData, setFormData] = useState({ name: "", phone: "", service: "" });
   const [submitted, setSubmitted] = useState(false);
   const [privacyOpen, setPrivacyOpen] = useState(false);
+  const [privacyChecked, setPrivacyChecked] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -407,11 +408,33 @@ export default function Index() {
                       <option>Удаление пятен и запахов</option>
                     </select>
                   </div>
-                  <button type="submit" className="neon-btn w-full py-4 rounded-xl text-base font-bold mt-2 flex items-center justify-center gap-2">
+                  <label className="flex items-start gap-3 cursor-pointer group">
+                    <div
+                      onClick={() => setPrivacyChecked(!privacyChecked)}
+                      className={`w-5 h-5 rounded-md border flex-shrink-0 mt-0.5 flex items-center justify-center transition-all ${privacyChecked ? "bg-neon border-neon" : "border-white/20 bg-white/5 group-hover:border-neon/50"}`}
+                    >
+                      {privacyChecked && <Icon name="Check" size={12} className="text-[#060d14]" />}
+                    </div>
+                    <span className="text-xs text-white/50 leading-relaxed">
+                      Я согласен(а) с{" "}
+                      <button
+                        type="button"
+                        onClick={() => setPrivacyOpen(true)}
+                        className="text-neon underline underline-offset-2 hover:text-neon/80 transition-colors"
+                      >
+                        политикой конфиденциальности
+                      </button>{" "}
+                      и даю согласие на обработку персональных данных
+                    </span>
+                  </label>
+                  <button
+                    type="submit"
+                    disabled={!privacyChecked}
+                    className="neon-btn w-full py-4 rounded-xl text-base font-bold mt-1 flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed disabled:shadow-none disabled:transform-none"
+                  >
                     <Icon name="Send" size={18} />
                     Отправить заявку
                   </button>
-                  <p className="text-xs text-white/30 text-center">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
                 </form>
               )}
             </div>
